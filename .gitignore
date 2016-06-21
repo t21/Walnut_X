@@ -1,3 +1,8 @@
 .metadata
 Nordic_Semiconductor/RemoteSystemsTempFiles/**
 Nordic_Semiconductor/.metadata/**
+.autotools
+.cproject
+.project
+.settings
+_build
