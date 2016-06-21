@@ -37,99 +37,99 @@ remduplicates = $(strip $(if $1,$(firstword $1) $(call remduplicates,$(filter-ou
 
 #source common to all targets
 C_SOURCE_FILES += \
-$(abspath ../../../../../../components/libraries/button/app_button.c) \
-$(abspath ../../../../../../components/libraries/util/app_error.c) \
-$(abspath ../../../../../../components/libraries/util/app_error_weak.c) \
-$(abspath ../../../../../../components/libraries/fifo/app_fifo.c) \
-$(abspath ../../../../../../components/libraries/timer/app_timer.c) \
-$(abspath ../../../../../../components/libraries/util/app_util_platform.c) \
-$(abspath ../../../../../../components/libraries/crc16/crc16.c) \
-$(abspath ../../../../../../components/libraries/fds/fds.c) \
-$(abspath ../../../../../../components/libraries/fstorage/fstorage.c) \
-$(abspath ../../../../../../components/libraries/util/nrf_assert.c) \
-$(abspath ../../../../../../components/libraries/util/nrf_log.c) \
-$(abspath ../../../../../../components/libraries/uart/retarget.c) \
-$(abspath ../../../../../../components/libraries/util/sdk_mapped_flags.c) \
-$(abspath ../../../../../../components/libraries/sensorsim/sensorsim.c) \
-$(abspath ../../../../../../external/segger_rtt/RTT_Syscalls_GCC.c) \
-$(abspath ../../../../../../external/segger_rtt/SEGGER_RTT.c) \
-$(abspath ../../../../../../external/segger_rtt/SEGGER_RTT_printf.c) \
-$(abspath ../../../../../../components/libraries/uart/app_uart_fifo.c) \
-$(abspath ../../../../../../components/drivers_nrf/delay/nrf_delay.c) \
-$(abspath ../../../../../../components/drivers_nrf/common/nrf_drv_common.c) \
-$(abspath ../../../../../../components/drivers_nrf/gpiote/nrf_drv_gpiote.c) \
-$(abspath ../../../../../../components/drivers_nrf/uart/nrf_drv_uart.c) \
-$(abspath ../../../../../../components/drivers_nrf/pstorage/pstorage.c) \
-$(abspath ../../../../../bsp/bsp.c) \
-$(abspath ../../../../../bsp/bsp_btn_ble.c) \
-$(abspath ../../../main.c) \
-$(abspath ../../../../../../components/ble/common/ble_advdata.c) \
-$(abspath ../../../../../../components/ble/ble_advertising/ble_advertising.c) \
-$(abspath ../../../../../../components/ble/ble_services/ble_bas/ble_bas.c) \
-$(abspath ../../../../../../components/ble/common/ble_conn_params.c) \
-$(abspath ../../../../../../components/ble/common/ble_conn_state.c) \
-$(abspath ../../../../../../components/ble/ble_services/ble_dis/ble_dis.c) \
-$(abspath ../../../../../../components/ble/ble_services/ble_gls/ble_gls.c) \
-$(abspath ../../../../../../components/ble/ble_services/ble_gls/ble_gls_db.c) \
-$(abspath ../../../../../../components/ble/ble_racp/ble_racp.c) \
-$(abspath ../../../../../../components/ble/common/ble_srv_common.c) \
-$(abspath ../../../../../../components/ble/peer_manager/gatt_cache_manager.c) \
-$(abspath ../../../../../../components/ble/peer_manager/gattc_cache_manager.c) \
-$(abspath ../../../../../../components/ble/peer_manager/gatts_cache_manager.c) \
-$(abspath ../../../../../../components/ble/peer_manager/id_manager.c) \
-$(abspath ../../../../../../components/ble/peer_manager/peer_data.c) \
-$(abspath ../../../../../../components/ble/peer_manager/peer_data_storage.c) \
-$(abspath ../../../../../../components/ble/peer_manager/peer_database.c) \
-$(abspath ../../../../../../components/ble/peer_manager/peer_id.c) \
-$(abspath ../../../../../../components/ble/peer_manager/peer_manager.c) \
-$(abspath ../../../../../../components/ble/peer_manager/pm_buffer.c) \
-$(abspath ../../../../../../components/ble/peer_manager/pm_mutex.c) \
-$(abspath ../../../../../../components/ble/peer_manager/security_dispatcher.c) \
-$(abspath ../../../../../../components/ble/peer_manager/security_manager.c) \
-$(abspath ../../../../../../components/toolchain/system_nrf51.c) \
-$(abspath ../../../../../../components/softdevice/common/softdevice_handler/softdevice_handler.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/button/app_button.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/util/app_error.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/util/app_error_weak.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/fifo/app_fifo.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/timer/app_timer.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/util/app_util_platform.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/crc16/crc16.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/fds/fds.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/fstorage/fstorage.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/util/nrf_assert.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/util/nrf_log.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/uart/retarget.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/util/sdk_mapped_flags.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/sensorsim/sensorsim.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/external/segger_rtt/RTT_Syscalls_GCC.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/external/segger_rtt/SEGGER_RTT.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/external/segger_rtt/SEGGER_RTT_printf.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/uart/app_uart_fifo.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/delay/nrf_delay.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/common/nrf_drv_common.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/gpiote/nrf_drv_gpiote.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/uart/nrf_drv_uart.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/pstorage/pstorage.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/examples/bsp/bsp.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/examples/bsp/bsp_btn_ble.c) \
+$(abspath ../main.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/common/ble_advdata.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_advertising/ble_advertising.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_bas/ble_bas.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/common/ble_conn_params.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/common/ble_conn_state.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_dis/ble_dis.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_gls/ble_gls.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_gls/ble_gls_db.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_racp/ble_racp.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/common/ble_srv_common.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/gatt_cache_manager.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/gattc_cache_manager.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/gatts_cache_manager.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/id_manager.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/peer_data.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/peer_data_storage.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/peer_database.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/peer_id.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/peer_manager.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/pm_buffer.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/pm_mutex.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/security_dispatcher.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/security_manager.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/toolchain/system_nrf51.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/softdevice/common/softdevice_handler/softdevice_handler.c) \
 
 #assembly files common to all targets
-ASM_SOURCE_FILES  = $(abspath ../../../../../../components/toolchain/gcc/gcc_startup_nrf51.s)
+ASM_SOURCE_FILES  = $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/toolchain/gcc/gcc_startup_nrf51.s)
 
 #includes common to all targets
-INC_PATHS  = -I$(abspath ../../../config/ble_app_gls_s130_pca10028)
-INC_PATHS += -I$(abspath ../../../config)
-INC_PATHS += -I$(abspath ../../../../../../components/drivers_nrf/config)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/timer)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/fifo)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/fstorage/config)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/fds/config)
-INC_PATHS += -I$(abspath ../../../../../../components/softdevice/s130/headers)
-INC_PATHS += -I$(abspath ../../../../../../components/drivers_nrf/delay)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/crc16)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/util)
-INC_PATHS += -I$(abspath ../../../../../../components/drivers_nrf/uart)
-INC_PATHS += -I$(abspath ../../../../../../components/ble/common)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/sensorsim)
-INC_PATHS += -I$(abspath ../../../../../../components/ble/peer_manager)
-INC_PATHS += -I$(abspath ../../../../../../components/drivers_nrf/pstorage)
-INC_PATHS += -I$(abspath ../../../../../../components/ble/ble_services/ble_dis)
-INC_PATHS += -I$(abspath ../../../../../../components/device)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/uart)
-INC_PATHS += -I$(abspath ../../../../../../components/ble/ble_services/ble_gls)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/button)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/fstorage)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/experimental_section_vars)
-INC_PATHS += -I$(abspath ../../../../../../components/drivers_nrf/gpiote)
-INC_PATHS += -I$(abspath ../../../../../../external/segger_rtt)
-INC_PATHS += -I$(abspath ../../../../../bsp)
-INC_PATHS += -I$(abspath ../../../../../../components/toolchain/CMSIS/Include)
-INC_PATHS += -I$(abspath ../../../../../../components/drivers_nrf/hal)
-INC_PATHS += -I$(abspath ../../../../../../components/ble/ble_racp)
-INC_PATHS += -I$(abspath ../../../../../../components/toolchain/gcc)
-INC_PATHS += -I$(abspath ../../../../../../components/toolchain)
-INC_PATHS += -I$(abspath ../../../../../../components/libraries/fds)
-INC_PATHS += -I$(abspath ../../../../../../components/drivers_nrf/common)
-INC_PATHS += -I$(abspath ../../../../../../components/ble/ble_advertising)
-INC_PATHS += -I$(abspath ../../../../../../components/softdevice/s130/headers/nrf51)
-INC_PATHS += -I$(abspath ../../../../../../components/ble/ble_services/ble_bas)
-INC_PATHS += -I$(abspath ../../../../../../components/softdevice/common/softdevice_handler)
+INC_PATHS  = -I$(abspath ../config/ble_app_gls_s130_pca10028)
+INC_PATHS += -I$(abspath ../config)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/config)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/timer)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/fifo)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/fstorage/config)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/fds/config)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/softdevice/s130/headers)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/delay)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/crc16)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/util)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/uart)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/common)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/sensorsim)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/pstorage)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_dis)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/device)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/uart)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_gls)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/button)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/fstorage)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/experimental_section_vars)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/gpiote)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/external/segger_rtt)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/examples/bsp)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/toolchain/CMSIS/Include)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/hal)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_racp)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/toolchain/gcc)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/toolchain)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/fds)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/common)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_advertising)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/softdevice/s130/headers/nrf51)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_bas)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/softdevice/common/softdevice_handler)
 
 OBJECT_DIRECTORY = _build
 LISTING_DIRECTORY = $(OBJECT_DIRECTORY)
