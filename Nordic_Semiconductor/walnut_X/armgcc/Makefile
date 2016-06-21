@@ -5,7 +5,7 @@ export OUTPUT_FILENAME
 MAKEFILE_NAME := $(MAKEFILE_LIST)
 MAKEFILE_DIR := $(dir $(MAKEFILE_NAME) ) 
 
-TEMPLATE_PATH = ../../../../../../components/toolchain/gcc
+TEMPLATE_PATH = ../../nRF5_SDK_11.0.0_89a8197/components/toolchain/gcc
 ifeq ($(OS),Windows_NT)
 include $(TEMPLATE_PATH)/Makefile.windows
 else
@@ -60,6 +60,8 @@ $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/common/nrf_drv_co
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/gpiote/nrf_drv_gpiote.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/uart/nrf_drv_uart.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/pstorage/pstorage.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/twi/app_twi.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/twi_master/nrf_drv_twi.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/examples/bsp/bsp.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/examples/bsp/bsp_btn_ble.c) \
 $(abspath ../main.c) \
@@ -72,6 +74,7 @@ $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_dis/ble_
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_gls/ble_gls.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_gls/ble_gls_db.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_racp/ble_racp.c) \
+$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_radio_notification/ble_radio_notification.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/common/ble_srv_common.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/gatt_cache_manager.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/gattc_cache_manager.c) \
@@ -88,12 +91,16 @@ $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/security_dis
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager/security_manager.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/toolchain/system_nrf51.c) \
 $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/softdevice/common/softdevice_handler/softdevice_handler.c) \
+$(abspath ../sensors.c) \
+$(abspath ../w_ess_advertising.c) \
+$(abspath ../Si7020.c) \
 
 #assembly files common to all targets
 ASM_SOURCE_FILES  = $(abspath ../../nRF5_SDK_11.0.0_89a8197/components/toolchain/gcc/gcc_startup_nrf51.s)
 
 #includes common to all targets
-INC_PATHS  = -I$(abspath ../config/ble_app_gls_s130_pca10028)
+INC_PATHS  = -I$(abspath ../)
+INC_PATHS += -I$(abspath ../config/ble_app_gls_s130_pca10028)
 INC_PATHS += -I$(abspath ../config)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/config)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/timer)
@@ -104,7 +111,10 @@ INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/softdevice/s13
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/delay)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/crc16)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/util)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/twi)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/twi_master)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/drivers_nrf/uart)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/trace)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/common)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/libraries/sensorsim)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/peer_manager)
@@ -130,6 +140,7 @@ INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_advert
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/softdevice/s130/headers/nrf51)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_services/ble_bas)
 INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/softdevice/common/softdevice_handler)
+INC_PATHS += -I$(abspath ../../nRF5_SDK_11.0.0_89a8197/components/ble/ble_radio_notification)
 
 OBJECT_DIRECTORY = _build
 LISTING_DIRECTORY = $(OBJECT_DIRECTORY)
@@ -139,8 +150,8 @@ OUTPUT_BINARY_DIRECTORY = $(OBJECT_DIRECTORY)
 BUILD_DIRECTORIES := $(sort $(OBJECT_DIRECTORY) $(OUTPUT_BINARY_DIRECTORY) $(LISTING_DIRECTORY) )
 
 #flags common to all targets
-CFLAGS  = -DNRF_LOG_USES_UART=1
-CFLAGS += -DBOARD_PCA10028
+CFLAGS  = -DNRF_LOG_USES_RTT=1
+CFLAGS += -DBOARD_CUSTOM
 CFLAGS += -DSOFTDEVICE_PRESENT
 CFLAGS += -DNRF51
 CFLAGS += -DS130
@@ -153,6 +164,7 @@ CFLAGS += -mfloat-abi=soft
 # keep every function in separate section. This will allow linker to dump unused functions
 CFLAGS += -ffunction-sections -fdata-sections -fno-strict-aliasing
 CFLAGS += -fno-builtin --short-enums 
+CFLAGS += --specs=nano.specs -u _scanf_float -u _printf_float
 # keep every function in separate section. This will allow linker to dump unused functions
 LDFLAGS += -Xlinker -Map=$(LISTING_DIRECTORY)/$(OUTPUT_FILENAME).map
 LDFLAGS += -mthumb -mabi=aapcs -L $(TEMPLATE_PATH) -T$(LINKER_SCRIPT)
@@ -164,8 +176,8 @@ LDFLAGS += --specs=nano.specs -lc -lnosys
 
 # Assembler flags
 ASMFLAGS += -x assembler-with-cpp
-ASMFLAGS += -DNRF_LOG_USES_UART=1
-ASMFLAGS += -DBOARD_PCA10028
+ASMFLAGS += -DNRF_LOG_USES_RTT=1
+ASMFLAGS += -DBOARD_CUSTOM
 ASMFLAGS += -DSOFTDEVICE_PRESENT
 ASMFLAGS += -DNRF51
 ASMFLAGS += -DS130

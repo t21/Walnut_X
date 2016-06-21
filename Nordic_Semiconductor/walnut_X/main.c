@@ -1199,25 +1199,25 @@ static void detect_erase_bond_pressed(bool * p_erase_bonds)
 
 
 //#ifdef DEBUG
-static void radio_notification_blink(bool radio_active)
-{
-    if (radio_active) {
-        nrf_gpio_pin_set(LED_1);
-    } else {
-        nrf_gpio_pin_clear(LED_1);
-    }
-}
+//static void radio_notification_blink(bool radio_active)
+//{
+//    if (radio_active) {
+//        nrf_gpio_pin_set(LED_1);
+//    } else {
+//        nrf_gpio_pin_clear(LED_1);
+//    }
+//}
 //#endif
 
 
-static void radio_notification_init()
-{
-//#ifdef DEBUG    
-    uint32_t err_code;
-    err_code = ble_radio_notification_init(APP_PRIORITY_LOW, NRF_RADIO_NOTIFICATION_DISTANCE_800US, radio_notification_blink);
-    APP_ERROR_CHECK(err_code);
-//#endif
-}
+//static void radio_notification_init()
+//{
+////#ifdef DEBUG
+//    uint32_t err_code;
+//    err_code = ble_radio_notification_init(APP_PRIORITY_LOW, NRF_RADIO_NOTIFICATION_DISTANCE_800US, radio_notification_blink);
+//    APP_ERROR_CHECK(err_code);
+////#endif
+//}
 
 
 static void sensors_callback(sensors_evt_t evt, sensors_data_t *data)
@@ -1232,7 +1232,7 @@ static void sensors_callback(sensors_evt_t evt, sensors_data_t *data)
             }
             break;
         case SI7020_HUM_MEAS_EVT:
-            NRF_LOG_PRINTF("[APP] T=%d.%02d°C, RH=%d.%02d%%\r\n", (uint32_t)data->temperature, 
+            NRF_LOG_PRINTF("[APP] T=%d.%02dï¿½C, RH=%d.%02d%%\r\n", (uint32_t)data->temperature, 
                                                         (uint32_t)(100.0 * data->temperature) - 100 * (uint32_t)data->temperature, 
                                                         (uint32_t)data->humidity,
                                                         (uint32_t)(100.0 * data->humidity) - 100 * (uint32_t)data->humidity);
